@@ -1,0 +1,130 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-size: 0.95em;
+  text-align: center;
+  font-family: 'Cairo', sans-serif;
+  position: absolute;
+  width: 100%;
+  text-decoration: none;
+  color: #333;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  
+}
+
+svg {
+  grid-area: content;
+  margin-top: 0px;
+  margin-left: -64px;
+  z-index: -10;
+}
+
+.doc-title {
+  grid-area: header;
+  font-size: 24px;
+  display: block;
+  background-color: #1cabe2;
+  color: white;
+  font-weight: 600;
+  z-index: 5;
+  width: 100%;
+}
+
+#subtitle {
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  z-index: 5;
+}
+
+
+a {
+  text-decoration: none;  
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;  
+}
+
+path .title :hover {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.options {
+  padding: 2px;
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  padding: 22px;
+}
+
+.options input:hover{
+  cursor: pointer;
+}
+
+#wealth {
+  display: flex;
+  flex-direction: column;
+}
+
+#options-title{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas: 
+  "sidebar"
+  "header"
+  "content";
+}
+
+@media (min-width: 500px) {
+  .wrapper {
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: 
+    "header  header"
+    "sidebar content";
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+      "header header  header"
+      "sidebar  content"
+      "sidebar  content "
+   }
+   nav ul {
+     flex-direction: column;
+   }
+}
+
+
+#title{
+  font-size: 34px;
+}
+
+.extra-info{
+  font-size: 50px;
+  background-color: red;
+  display: block;
+  z-index: 2;
+}
+
+.legend{
+  z-index: 2;
+}
